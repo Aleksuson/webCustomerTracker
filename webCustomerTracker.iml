@@ -20,8 +20,14 @@
         </fileset>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -40,5 +46,6 @@
     <orderEntry type="library" name="mysql-connector-java-8.0.13" level="project" />
     <orderEntry type="library" name="hibernate (2)" level="project" />
     <orderEntry type="library" name="c3p0-0.9.5.2" level="project" />
+    <orderEntry type="library" name="hibernate (2)" level="project" />
   </component>
 </module>
