@@ -9,8 +9,9 @@
 <html>
   <head>
     <title>$Title$</title>
+
   </head>
   <body>
-  $END$
+  <% response.sendRedirect("/customer/list/");%>
   </body>
 </html>
