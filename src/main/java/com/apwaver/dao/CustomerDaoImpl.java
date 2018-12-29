@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public class CustomerDaoImpl implements CustomerDao {
 
-    // need to inject the session factory
+     // need to inject the session factory
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -22,12 +22,23 @@ public class CustomerDaoImpl implements CustomerDao {
         // get the current hibernate session
         Session session = sessionFactory.getCurrentSession();
 
-        // create query
-        Query query = session.createQuery("from Customer", Customer.class);
+        // create query ... sort by last Name
+        Query query = session.createQuery("from Customer order by lastName", Customer.class);
 
         // execute query and get result list
         List<Customer> customers = query.getResultList();
         // return the results
         return customers;
+    }
+
+    @Override
+    public void saveCustomer(Customer customer) {
+
+        // get the current hibernate session
+        Session session = sessionFactory.getCurrentSession();
+
+        // save customer
+        session.save(customer);
+
     }
 }
